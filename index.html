@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLY HANS</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        *,
+        html,
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --background: #005;
+            --primary: #88D5BF;
+            --secondary: #5D6BF8;
+            --third: #e27fcb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #005;
+        }
+
+        .s_container {
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .shape {
+            background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+            animation: morph 8s ease-in-out infinite;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            height: 400px;
+            transition: all 1s ease-in-out;
+            width: 400px;
+            z-index: 5;
+        }
+
+        @keyframes morph {
+            0% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+                background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+            }
+
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+            }
+        }
+
+        .upsale-button {
+            position: relative;
+            z-index: 0;
+            height: 40px;
+            overflow: hidden;
+            border: none !important;
+            padding: 0 !important;
+            background: #5D5DFF !important;
+            color: #656565;
+            background: white;
+            border-radius: 8px;
+            width: 150px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            box-shadow: 0 4px 50px 0 rgb(0 0 0 / 7%);
+            transition: .2s all linear;
+            text-decoration: initial;
+        }
+
+        .upsale-button span {
+            position: relative;
+            z-index: 1;
+            height: calc(100% - 4px);
+            width: calc(100% - 4px);
+            top: 2px;
+            left: 2px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            color: white;
+            background: #2a2a93;
+        }
+
+        .upsale-button:after {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: 50% 50%, 50% 50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(201, 52, 238) 50%, rgba(255, 255, 255, 0) 100%);
+            -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+        }
+
+
+        @-webkit-keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-screen h-dvh flex items-center justify-between flex-col relative s_container overflow-hidden">
+        <div class="flex items-center justify-evenly w-full">
+            <div class="shape flex items-center justify-center">
+                <img src="./assets/rat.jpg" alt=":)" class="h-60 w-60 rounded-lg">
+            </div>
+
+            <div class="upsale-button cursor-pointer" id="nudes">
+                <span>My nudes 🤩</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="flex items-center p-4">
+                <p class="text-gray-300 text-xl">Kung ang english ng langit ay sky ☁, bat di ka sakin mag
+                    hi😚😙🥰</p>
+                <img src="./assets/iloveyou.jpg" class="h-32" alt="">
+            </div>
+        </div>
+
+        <a href="https://www.instagram.com/kukis_is_not_defined/" class="text-blue-400">@kukis_is_not_defined</a>
+        <div id="bastos" class="hidden">
+            <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-80 z-50" id="close">
+                <div class="bg-[#4848b6] p-4 rounded shadow-lg">
+                    <img src=" ./assets/batos.jpg" alt="bastos" class="" ">
+                </div>
+                <img src="./assets/yasminpeach.jpg" class="w-12 h-12 bottom-0 absolute left-0">
+            </div>
+        </div>
+
+    </div>
+
+    <script src=" ./index.js" async defer>
+    </script>
+</body>
+
+</html>
